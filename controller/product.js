@@ -42,8 +42,8 @@ const purchase = async (req, res) => {
                     user : user?.id
                 }
             },
-            success_url : 'http://localhost:3000/orders-history',
-            cancel_url : 'http://localhost:3000/'
+            success_url : 'http://amazon-clone-frontend-seven.vercel.app/orders-history',
+            cancel_url : 'https://amazon-clone-frontend-seven.vercel.app/'
         })
         res.status(200).json({ result : true, id : session.id})
     } catch (error) {
