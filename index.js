@@ -12,7 +12,7 @@ const webhookController = require('./routes/webhook')
 const orderRouter = require('./routes/orderHistory')
 
 
-app.use(cors());
+app.use(cors(corsOpt));
 app.use(express.json());    // To parse the incoming requests with JSON payloads
 app.use(express.urlencoded({ extended: false })); // To parse the incoming requests with urlencoded payloads
 app.use(cookieParser())
