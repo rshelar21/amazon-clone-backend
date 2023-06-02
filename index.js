@@ -7,12 +7,12 @@ require('dotenv').config({ path: '.env'});
 const userRouter = require('./routes/user');
 const cookieParser = require('cookie-parser')
 const productRouter = require('./routes/product')
-const corsOpt = require("./config/corsOpt")
+// const corsOpt = require("./config/corsOpt")
 const webhookController = require('./routes/webhook')
 const orderRouter = require('./routes/orderHistory')
 
 
-app.use(cors(corsOpt));
+app.use(cors());
 app.use(express.json());    // To parse the incoming requests with JSON payloads
 app.use(express.urlencoded({ extended: false })); // To parse the incoming requests with urlencoded payloads
 app.use(cookieParser())
