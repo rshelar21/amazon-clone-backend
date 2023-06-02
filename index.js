@@ -7,7 +7,6 @@ require('dotenv').config({ path: '.env'});
 const userRouter = require('./routes/user');
 const cookieParser = require('cookie-parser')
 const productRouter = require('./routes/product')
-const corsOpt = require("./config/corsOpt")
 const webhookController = require('./routes/webhook')
 const orderRouter = require('./routes/orderHistory')
 

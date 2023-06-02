@@ -74,6 +74,7 @@ const register = async (req, res) => {
       .status(200)
       .json({ result: true, token, email: newUser.email, name: newUser.name , id : newUser._id , message : "Registerd Successfully"});
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: "Something went wrong", result : false });
   }
 };
